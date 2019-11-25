@@ -1,0 +1,35 @@
+<h2>Register</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="onupdate()">
+  <div class="form-group">
+    <label for="role">Role</label>
+    <tr></tr>
+    <select formControlName="role">
+      <option *ngFor="let role of roleOptions">{{ role }}</option>
+    </select>
+
+  </div>
+  <div class="form-group">
+    <label for="famille">Family</label>
+    <input type="text" formControlName="famille" class="form-control"
+    >
+  </div>
+  <div class="form-group">
+    <label for="nourriture">Nourriture</label>
+    <input type="text" formControlName="nourriture" class="form-control"
+    ></div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" formControlName="age" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.age.errors }" />
+    </div>
+
+  <div class="form-group">
+    <button [disabled]="loading" class="btn btn-primary">
+      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+      update
+    </button>
+    <a routerLink="/" class="btn btn-link">Cancel</a>  <a><h4>**if you leave a box empty it remains as the old value</h4>
+</a>
+  </div>
+</form>

@@ -1,0 +1,41 @@
+<div class="topnav">
+  <a routerLink="">Home</a>
+  <a routerLink="/friend">Friends</a>
+  <a  routerLink="/request">Find new Friend</a>
+    <a class="active" routerLink="/add">request</a>
+</div>
+<div  align="center">
+  <table class="table" align="center">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col" >     </th>
+                <th scope="col"> </th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let user of username ,let i = index">
+        <td>{{user}}</td>
+        <td>
+
+          <button (click)="accept(i)" class="btn btn-primary btn-sm"
+   >
+            Accept
+            <span class="oi oi-trash"></span>
+          </button>
+
+          </td>
+
+            <td>
+
+              <button (click)="decline(i)" class="btn btn-danger btn-sm">
+                Decline
+                <span class="oi oi-trash"></span>
+              </button>
+
+            </td></tr>
+      </tbody>
+  </table>
+</div>

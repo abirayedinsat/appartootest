@@ -1,0 +1,25 @@
+<div class="topnav">
+  <a routerLink="">Home</a>
+  <a class="active" routerLink="friend">Friends</a>
+  <a routerLink="/request">Find new Friend</a>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name Friend</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+        <tbody>
+
+<tr  *ngFor="let friend of friends" ><td>{{friend}}</td>
+
+<td>
+
+  <button class="btn btn-danger btn-sm"
+    >
+    Remove
+    <span class="oi oi-trash"></span>
+  </button>
+</tr></tbody></table>
+

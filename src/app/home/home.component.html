@@ -1,0 +1,24 @@
+﻿
+<div class="topnav">
+  <a class="active" routerLink="">Home</a>
+  <a routerLink="/friend">Friends</a>
+    <a routerLink="/request">Find new Friend</a>
+      <a  routerLink="/add">request</a>
+
+  <a  (click)="logout()">Logout</a>
+</div>
+<div align="center">
+<h3>Yellow vests movement</h3></div>
+<ul>
+    <li>
+      <h3> role </h3>
+        {{role}}
+        <h3>family </h3>{{famille}}
+        <h3> Food </h3>{{nourriture}}
+        <h3>age </h3>{{age}}
+        <tr></tr>
+    </li>
+      <button routerLink="/profile" >
+        update
+      </button>
+</ul>
